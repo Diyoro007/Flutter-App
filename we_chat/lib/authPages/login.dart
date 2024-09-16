@@ -1,5 +1,6 @@
 // import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:we_chat/authPages/sign.dart';
 import 'package:we_chat/theme.dart';
 import 'package:we_chat/widgets/login_form.dart';
 import 'package:we_chat/widgets/login_option.dart';
@@ -36,11 +37,16 @@ class Login extends StatelessWidget {
                 const SizedBox(
                   width: 5,
                 ),
-                Text(
-                  "S'inscrire",
-                  style: textButton.copyWith(
-                      decoration: TextDecoration.underline,
-                      decorationThickness: 1),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
+                  },
+                  child: Text(
+                    "S'inscrire",
+                    style: textButton.copyWith(
+                        decoration: TextDecoration.underline,
+                        decorationThickness: 1),
+                  ),
                 )
               ],
             ),
